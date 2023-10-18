@@ -64,8 +64,8 @@ tmp = *stack;
 *stack = (*stack)->next;
 res = (*stack)->n - tmp->n;
 (*stack)->n = res;
-(*stack)->prev = NULL;
 free(tmp);
+(*stack)->prev = NULL;
 }
 /**
  * multi - multiply nodes
