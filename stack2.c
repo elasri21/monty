@@ -57,13 +57,15 @@ free((*stack)->prev);
 void subbing(stack_t **stack, unsigned int l_num)
 {
 int res;
+stack_t *tmp;
 if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 m_err(8, l_num, "sub");
-(*stack) = (*stack)->next;
-res = (*stack)->n - (*stack)->prev->n;
+tmp = *stack;
+*stack = (*stack)->next;
+res = (*stack)->n - tmp->n;
 (*stack)->n = res;
-free((*stack)->prev);
 (*stack)->prev = NULL;
+free(tmp);
 }
 /**
  * multi - multiply nodes
