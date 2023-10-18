@@ -76,7 +76,7 @@ tmp = *stack;
 while (tmp != NULL)
 {
 asc = tmp->n;
-if (asc < 0 || asc > 127)
+if (asc <= 0 || asc > 127)
 break;
 printf("%c", asc);
 tmp = tmp->next;
