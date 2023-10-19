@@ -102,7 +102,11 @@ len++;
 tmp = tmp->next;
 }
 if (stack == NULL || *stack == NULL || len < 2)
-m_err(8, l_num, "mul");
+{
+fprintf(stderr, "L%d: can't mul, stack too short", l_num);
+exit(EXIT_FAILURE);
+}
+/*m_err(8, l_num, "mul");*/
 (*stack) = (*stack)->next;
 res = (*stack)->n * (*stack)->prev->n;
 (*stack)->n = res;
