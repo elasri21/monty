@@ -70,4 +70,5 @@ void p_err(int, ...);
 void m_err(int, ...);
 void str_err(int, ...);
 void r_otr(stack_t **, unsigned int);
+
 #endif
