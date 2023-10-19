@@ -32,7 +32,7 @@ void p_stack(stack_t **stack, unsigned int l_num)
 stack_t *tmp;
 (void)l_num;
 if (*stack == NULL)
-exit(EXIT_FAILURE);
+return;
 tmp = *stack;
 while (tmp != NULL)
 {
