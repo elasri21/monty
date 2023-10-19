@@ -69,9 +69,3 @@ if (stack == NULL || *stack == NULL)
 m_err(6, l_num);
 printf("%d\n", (*stack)->n);
 }
-
-
-
-
-
-

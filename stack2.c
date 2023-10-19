@@ -29,7 +29,6 @@ void nop(stack_t **stack, unsigned int l_num)
 {
 (void)stack;
 (void)l_num;
-return;
 }
 /**
  * adding - summing nodes
