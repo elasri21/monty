@@ -74,5 +74,6 @@ fprintf(stderr, "L%u: can't pint, stack empty\n", l_num);
 f_node();
 exit(EXIT_FAILURE);
 }
+else
 printf("%d\n", (*stack)->n);
 }
