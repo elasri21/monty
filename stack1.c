@@ -8,7 +8,7 @@
 void add_in_stack(stack_t **new, __attribute__((unused))unsigned int l_num)
 {
 stack_t *tmp;
-if (new == NULL || *new == NULL)
+if (*new == NULL)
 exit(EXIT_FAILURE);
 if (h == NULL)
 {

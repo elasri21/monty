@@ -40,8 +40,6 @@ void adding(stack_t **stack, unsigned int l_num)
 {
 int result, len = 0;
 stack_t *tmp;
-if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-m_err(8, l_num, "add");
 tmp = *stack;
 while (tmp != NULL)
 {
