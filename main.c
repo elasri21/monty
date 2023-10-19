@@ -61,16 +61,16 @@ free(tmp);
 void add_in_queue(stack_t **new, __attribute__((unused))unsigned int l_num)
 {
 stack_t *tmp;
-if (new == NULL || *new == NULL)
+if (*new == NULL)
 exit(EXIT_FAILURE);
 if (h == NULL)
-{
 h = *new;
-return;
-}
+else
+{
 tmp = h;
 while (tmp->next != NULL)
 tmp = tmp->next;
 tmp->next = *new;
 (*new)->prev = tmp;
+}
 }
