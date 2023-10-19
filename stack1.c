@@ -65,7 +65,11 @@ free(tmp);
  */
 void p_top(stack_t **stack, unsigned int l_num)
 {
-if (stack == NULL || *stack == NULL)
-m_err(6, l_num);
+if (*stack == NULL)
+{
+fprintf(stderr, "L%u: can't pint, stack empty\n", l_num);
+f_node();
+exit(EXIT_FAILURE);
+}
 printf("%d\n", (*stack)->n);
 }
