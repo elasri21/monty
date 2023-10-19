@@ -31,13 +31,16 @@ void p_stack(stack_t **stack, unsigned int l_num)
 {
 stack_t *tmp;
 (void)l_num;
-if (*stack == NULL)
-return;
+if (stack == NULL || *stack == NULL)
+printf("\n");
+else
+{
 tmp = *stack;
 while (tmp != NULL)
 {
 printf("%d\n", tmp->n);
 tmp = tmp->next;
+}
 }
 }
 /**
@@ -65,7 +68,7 @@ free(tmp);
  */
 void p_top(stack_t **stack, unsigned int l_num)
 {
-if (*stack == NULL)
+if (stack == NULL || *stack == NULL)
 {
 fprintf(stderr, "L%u: can't pint, stack empty\n", l_num);
 f_node();
